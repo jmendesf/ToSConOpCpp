@@ -16,7 +16,7 @@ add_executable(edit_tos
 target_include_directories(edit_tos 
     PRIVATE
     ${CMAKE_SOURCE_DIR}/include
-    /home/jmendesforte/Higra/include
+    /path/to/Higra/include
 )
 
 set(OpenCV_DIR "/usr/lib/x86_64-linux-gnu/cmake/opencv4")
