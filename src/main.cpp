@@ -13,14 +13,12 @@ int main(int argc, char** argv)
 {
     // Image path
     // 3D images not yet supported
-    std::string filename = "/home/jmendesforte/implementations/hierarchy_based_weights/ressources/ramen.jpg";
+    std::string filename = "../ressources/ramen.jpg";
 
     std::cout << "Building tos\n";
     Tree_of_shapes tos = Tree_of_shapes(filename);
     std::cout << tos.nb_nodes() << " tos nodes\n";
 
-    tos.enrich();
-    std::cout << "Enriched.\n";
     cv::Mat im = tos.reconstruct_image();
     // Reconstruct the image from a non-modified ToS: reconstruct the original image
     cv::imwrite("orig.png", im);
